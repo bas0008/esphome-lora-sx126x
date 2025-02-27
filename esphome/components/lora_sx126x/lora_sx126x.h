@@ -2,7 +2,7 @@
 #define LORA_SX126X_H
 
 #include "esphome/core/component.h"
-#include "SX126x-Arduino.h"
+#include <SX126x-Arduino.h>  // Utiliser <> au lieu de "" pour les bibliothèques PlatformIO
 
 namespace esphome {
 namespace lora_sx126x {
@@ -28,7 +28,7 @@ class LoraSX126X : public Component {
   void set_lora_preamble_length(uint16_t pl) { lora_preamble_length_ = pl; }
 
  protected:
-  SX126x lora_;
+  ::SX126x lora_;  // Ajouter :: pour indiquer l’espace de noms global
   int pin_lora_nss_;
   int pin_lora_reset_;
   int pin_lora_dio_1_;
