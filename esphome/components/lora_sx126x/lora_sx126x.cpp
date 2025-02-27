@@ -1,4 +1,4 @@
-#include "lora_sx126x.h"g
+#include "lora_sx126x.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
